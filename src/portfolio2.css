@@ -1,0 +1,253 @@
+*{
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    transition: width none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden ;
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width:1rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
+section{
+    padding: 12rem 9%;
+}
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: .9rem 3rem;
+    border-radius: .5rem;
+    color: #000;
+    background: rgb(247, 182, 85);
+    font-size: 1.76rem;
+    cursor: pointer;
+    font-weight: 500;
+}
+.btn:hover{
+    background: #c4b4b4;
+}
+
+
+
+/*header1 section*/ 
+.header .header1{
+    background: #e2e5eb;
+    padding: 1.5rem 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header .header1 .logo{
+    display: flex;
+}
+.header .header1 .logo img{
+    width: 100%;
+    border-radius: 50%;
+    height: 6rem;
+}
+.header .header1 .logo h1{
+    font-size: 3rem;
+    color:rgb(240, 168, 34);
+    margin-top: 1.5rem;
+}
+.header .header1.active{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+.header .header1 .fa-bars{
+    display: block;
+    font-size: 3rem;
+    cursor: pointer;
+    margin-right:-62rem;
+}
+.header .header1 .icons .fa-times-circle{
+    display: block;
+    font-size: 3rem;
+}
+#sidemenu{
+    background:#e2e5eb;
+    position: fixed;
+    top: 0;
+    right: -30rem;
+    width: 30rem;
+    height: 60rem;
+    padding-top:10rem;
+    z-index: 2;
+    transition: 0.5s;
+    transform:0.2 ;
+
+}
+#sidemenu a{
+    display: block;
+    margin: 6rem;
+    color: #000;
+    font-size: 2rem;
+    text-decoration: underline;
+}
+#sidemenu a:hover{
+    color: goldenrod;
+}
+#sidemenu .fa-times-circle{
+    position: absolute;
+    top: 5rem;
+    left:5rem;
+    cursor: pointer;
+}
+/*header1 ends*/
+
+
+
+/*Bottom Section*/
+.bottom-navbar{
+    text-align: center;
+    background: #ebe0e0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: none;
+}
+.bottom-navbar a{
+    font-size: 2.5rem;
+    padding: 2rem;
+    color: #000;
+}
+.bottom-navbar a:hover{
+   background: #c4b4b4;
+}
+/*Bottom section Ends*/
+
+
+
+/*home section*/
+.home{
+    background: #efefef no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.home .row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap:1.5rem;
+}
+.home .row .content{
+    flex: 1 1 42rem;
+}
+.home .row .My-img{
+    flex: 1 1 42rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+.home .row .My-img .my-img{
+    width: 40%;
+    margin-top: -4rem;
+    border-radius: 2rem;
+}
+.home .row .content h3{
+    color:#000;
+    font-size: 4.5rem;
+}
+.home .row .content h4{
+    color:#424242;
+    font-size: 2.5rem;
+}
+.home .row .content h3 span{
+    color: orange;
+    font-size: 4.5rem;
+}
+.home .row .content p{
+    color: rgb(77, 76, 76);
+    font-size: 1.5rem;
+    line-height: 2;
+    padding: 1rem 0;
+}
+
+/*home section ends*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+    .header .header1{
+        padding: 2rem;
+    }   
+    section{
+        padding: 3rem 2rem;
+    }
+
+}
+
+@media (max-width:768px){
+    .header .header1{
+        position: relative;
+    }
+    .header .header1 .fa-bars{
+        margin-right:-30rem;
+    }
+    .bottom-navbar{
+        display: block;
+    }    
+
+    .home .row .content{
+        text-align: center;
+    }
+    .home .row .My-img .my-img{
+        width: 40%;
+        margin-top: 4rem;
+        border-radius: 2rem;
+    }
+    
+    
+    
+    
+}
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+    .header .header1 .fa-bars{
+        margin-right:-5rem;
+    }
+    .home .row .content{
+        text-align: center;
+    }
+    .home .row .My-img .my-img{
+        margin-top: 4rem;
+    }
+
+       
+}

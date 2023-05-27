@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+<link rel="stylesheet" href="src/contact.css">
+</head>
+<body>
+
+    <!--Header1 Section-->
+    <header class="header">
+        <div class="header1">
+            
+                <a href="#" class="logo">
+                    <img src="assets/logo1.jpg" alt="">
+                    <h1>SakshiB.</h1>
+                </a>
+                <i class="fa fa-bars" onclick="openmenu()"></i>
+            
+                <div class="icons">
+                <ul id="sidemenu">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="projects.html">Projects</a>
+                    <a href="contact.html">Contact</a>
+                    <i class="fa fa-times-circle" onclick="closemenu()"></i>
+                    </ul>
+                </div>
+        </div>
+    </header>
+    <!--Header1 section Ends-->
+
+
+  <!--Bottom Secion -->
+    <nav class="bottom-navbar">
+        <a href="index.html" class="fas fa-home"></a>
+        <a href="about.html" class="fas fa-portrait"></a>
+        <a href="projects.html" class="fas fa-list"></a>
+        <a href="contact.html" class="fa fa-comment"></a>
+    </nav>
+    <!--Bottom Section Ends-->
+
+
+    <!--Contact section-->
+    <section class="contact" id="contact">
+        <h1 class="heading"><span>Contact Me</span></h1>
+        <br>
+        <br>
+<div class="contact-right">
+    <form name="submit-to-google-sheet">
+        <input type="text" name="Name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="Message" rows="6" placeholder="Your Message"></textarea><br>
+        <button type="submit" class="btn">Submit</button>
+    </form>
+   <span id="msg"></span>
+</div>  
+
+<div class="contact-left">
+    <p><i class="fa-solid fa-envelope"></i> sakshibandichawade@gmail.com</p>
+    <p><i class="fa-solid fa-square-phone"></i> +91 9322828331</p>
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/sakshi-bandichawde-5a6330246"><img src="assets/linkdin.png"></a>
+        <a href="https://github.com/SakshiBandichawde"><img src="assets/github-icon.png"></a> 
+    </div>
+
+</div>
+
+
+
+    </section>
+    <!--Contact Section Ends-->
+
+
+
+  
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/ccae4f155e.js" crossorigin="anonymous"></script>
+    <script src="src/port.js"></script>
+</body>
+</html>
