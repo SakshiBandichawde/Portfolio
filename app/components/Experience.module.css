@@ -1,4 +1,6 @@
 .experience { padding-top: 50px; }
+.education { padding-top: 32px; }
+.education .entryBody { grid-template-columns: minmax(0, 1fr); }
 .panel { margin-top: 4px; border-radius: 8px; background: var(--color-surface); box-shadow: var(--shadow-soft); }
 .intro { display: grid; grid-template-columns: 1.1fr 1fr; border-bottom: 1px solid var(--color-border); }
 .intro > div:first-child { padding: 25px 32px 20px; }

@@ -1,13 +1,8 @@
 import Link from "next/link";
-import { ArrowUpRight, BriefcaseBusiness, CornerDownRight, GraduationCap, Layers3, ShoppingBag } from "lucide-react";
+import { ArrowUpRight, BriefcaseBusiness, CornerDownRight, Layers3, ShoppingBag } from "lucide-react";
 import styles from "./Experience.module.css";
 
 const entries = [
-  {
-    id: "internship", period: "Jul 2023 - Jan 2024", type: "Internship", title: "Web Developer Intern", company: "Advolve",
-    description: "Worked on WordPress websites, customised page layouts and handled responsive design updates.",
-    icon: BriefcaseBusiness,
-  },
   {
     id: "advolve", period: "Jan 2024 - Present", type: "Full-time", title: "Frontend Developer", company: "Advolve",
     description: "Built client websites and web applications with React/Next.js, focusing on responsive UI, animations, API integration and deployment.",
@@ -16,15 +11,16 @@ const entries = [
     links: [{ label: "Advolve Website", href: "/work/advolve" }, { label: "Villa Gulposh Booking System", href: "/work/villa-gulposh" }],
   },
   {
-    id: "freelance", period: "Freelance Projects", title: "Independent Developer",
+    id: "freelance", period: "Freelance Projects", title: "Freelance Full-Stack Developer",
     description: "Built and delivered websites and web applications for clients, including booking platforms, ecommerce stores and business websites.",
     icon: Layers3,
     linksTitle: "Selected projects",
     links: [{ label: "Karabook", href: "/work/karabook" }, { label: "Woodan", href: "/work/woodan" }, { label: "EcoClay Solutions", href: "/work/ecoclay" }, { label: "Komal Enterprises", href: "/work/komal-enterprises" }],
   },
   {
-    id: "education", period: "Jul 2021 - 2025", type: "Completed", title: "Master of Computer Applications (MCA)",
-    description: "SRTMUN, Nanded", icon: GraduationCap,
+    id: "internship", period: "Jul 2023 - Jan 2024", type: "Internship", title: "Web Developer Intern", company: "Advolve",
+    description: "Worked on WordPress websites, customised page layouts and handled responsive design updates.",
+    icon: BriefcaseBusiness,
   },
 ];
 
