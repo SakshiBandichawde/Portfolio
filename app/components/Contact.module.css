@@ -1,0 +1,10 @@
+.contact { padding: 12px 0 0; }
+.band { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 26px 32px; border-radius: 8px; background: var(--color-surface); box-shadow: var(--shadow-soft); }
+.band h2 { margin: 17px 0 12px; font-size: 29px; font-weight: 700; line-height: 1.25; }
+.band p { color: var(--color-muted); font-size: 13px; }
+.actions { display: flex; flex-direction: column; align-items: flex-end; gap: 23px; }
+.actions :global(.btn) { min-width: 165px; }
+.socials { display: flex; flex-wrap: wrap; gap: 24px; }
+.socials button { display: inline-flex; align-items: center; gap: 7px; min-height: 26px; padding: 0; border: 0; background: transparent; color: var(--color-muted); font-size: 11px; }
+.socials button:disabled { cursor: not-allowed; opacity: .65; }
+@media (max-width: 760px) { .band { flex-direction: column; align-items: flex-start; padding: 24px; } .band h2 { font-size: 27px; } .actions { align-items: flex-start; gap: 18px; } }

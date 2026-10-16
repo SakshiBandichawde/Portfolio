@@ -1,0 +1,4 @@
+.footer { padding: 65px 0 70px; }
+.content { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; color: var(--color-muted); font-size: 10px; }
+.content p { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+@media (max-width: 760px) { .footer { padding: 40px 0; } .content { flex-direction: column; } }

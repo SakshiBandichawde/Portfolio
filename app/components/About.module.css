@@ -1,0 +1,6 @@
+.about { padding: 52px 0; }
+.content { display: grid; grid-template-columns: 1.1fr 1fr; gap: 40px; margin-top: 18px; }
+.content h2 { margin: 0 0 10px; font-size: 32px; font-weight: 650; line-height: 1.2; }
+.content p { color: var(--color-muted); font-size: 13px; line-height: 1.8; }
+.workflow { padding-left: 44px; border-left: 1px solid var(--color-border); }
+@media (max-width: 760px) { .about { padding: 38px 0; } .content { grid-template-columns: 1fr; gap: 20px; } .content h2 { font-size: 28px; } .workflow { padding-left: 0; border-left: 0; } .break { display: none; } }

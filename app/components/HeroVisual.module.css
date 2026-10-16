@@ -1,0 +1,11 @@
+.visual { position: relative; width: 100%; max-width: 520px; justify-self: end; }
+.visual::before { content: ""; position: absolute; inset: 14% -6% 10%; border: 1px solid var(--color-border); border-radius: 38% 12% 35% 18%; transform: rotate(-9deg); pointer-events: none; }
+.editor { position: relative; display: grid; grid-template-columns: 24% minmax(0,1fr); align-items: stretch; aspect-ratio: 1.6; overflow: hidden; border: 1px solid #343b40; border-radius: 8px; background: #1c2226; box-shadow: 0 22px 35px rgba(26,24,22,.16), 0 4px 8px rgba(26,24,22,.15); }
+.explorer { padding: 55px 8px 18px 15px; color: #9ca7ad; font-family: ui-monospace, monospace; font-size: 10px; line-height: 2.3; }
+.explorer > div { display: flex; align-items: center; gap: 6px; white-space: nowrap; }
+.explorerTitle { margin-bottom: 5px; }
+.selected { color: #9ccfe9; }
+.codeImage { display: block; align-self: center; width: 100%; height: auto; }
+.label { position: absolute; top: 22%; right: -18px; padding: 10px 18px; border: 1px solid var(--color-border); border-radius: 999px; background: var(--color-surface); color: var(--color-muted); font-size: 11px; box-shadow: var(--shadow-soft); }
+@media (max-width: 760px) { .visual { justify-self: center; max-width: 540px; width: 94%; } .explorer { padding-left: 9px; font-size: 9px; } .label { right: -10px; padding: 7px 13px; } }
+@media (max-width: 380px) { .explorer { font-size: 7px; padding-top: 38px; } .explorer > div { gap: 3px; } }

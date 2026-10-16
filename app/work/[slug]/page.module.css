@@ -1,0 +1,13 @@
+.main { max-width: 960px; padding-top: 136px; }
+.back { display: flex; align-items: center; gap: 7px; width: fit-content; margin-bottom: 32px; color: var(--color-muted); font-size: 12px; }
+.main h1 { margin: 15px 0 10px; font-size: 44px; font-weight: 700; line-height: 1.2; }
+.meta { color: var(--color-muted); font-size: 14px; }
+.image { display: block; width: 100%; height: auto; max-height: 510px; object-fit: contain; margin: 36px 0; }
+.details { display: grid; gap: 28px; max-width: 780px; margin-top: 32px; }
+.details h2 { margin: 0 0 12px; color: var(--color-accent); font-size: 20px; }
+.details p,.details li { color: var(--color-muted); font-size: 14px; line-height: 1.8; }
+.details ul { padding-left: 18px; list-style: disc; }
+.details .stack { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+.stack li { padding: 4px 14px; border: 1px solid var(--color-border); border-radius: 999px; font-size: 12px; }
+.actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+@media (max-width: 760px) { .main { padding-top: 110px; } .main h1 { font-size: 34px; } }
