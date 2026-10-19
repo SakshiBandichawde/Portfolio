@@ -7,6 +7,7 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { projects } from "../../data/projects";
 import styles from "./page.module.css";
+import KarabookCaseStudy from "./KarabookCaseStudy";
 
 export function generateStaticParams() {
   return projects.map(project => ({ slug: project.slug }));
@@ -15,13 +16,24 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const { slug } = await params;
   const project = projects.find(item => item.slug === slug);
-  return { title: project ? `${project.title} | Sakshi Bandichawde` : "Project not found", description: project?.description };
+  const title = slug === "karabook" ? "KaraBook Case Study | Sakshi Bandichawde" : project ? `${project.title} | Sakshi Bandichawde` : "Project not found";
+  return { title, description: project?.description };
 }
 
 export default async function ProjectPage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const project = projects.find(item => item.slug === slug);
   if (!project) notFound();
+
+  if (project.slug === "karabook") {
+    return (
+      <>
+        <Header />
+        <KarabookCaseStudy project={project} />
+        <Footer />
+      </>
+    );
+  }
 
   return (
     <>

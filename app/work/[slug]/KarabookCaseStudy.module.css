@@ -1,0 +1,115 @@
+.main { padding-top: 140px; }
+.hero { display: grid; grid-template-columns: minmax(0, .92fr) minmax(0, 1.25fr); align-items: center; gap: 40px; padding-bottom: 54px; }
+.heroCopy { min-width: 0; animation: arrive 650ms ease-out both; }
+.heroCopy :global(.eyebrow) { color: var(--color-accent); font-size: 10px; }
+.hero h1 { margin: 19px 0 8px; font-size: 46px; font-weight: 750; line-height: 1.15; }
+.lead { color: var(--color-accent); font-size: 20px; line-height: 1.5; }
+.summary { max-width: 445px; margin-top: 18px; color: var(--color-muted); font-size: 14px; line-height: 1.75; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
+.actions :global(.btn) { min-height: 44px; }
+.heroVisual { min-width: 0; margin: 0; animation: arrive 800ms ease-out both; }
+.mockup { display: block; width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 18px 16px rgba(44, 33, 25, .12)); }
+.sectionHeading { display: flex; align-items: center; gap: 17px; margin-bottom: 18px; }
+.number { display: grid; place-items: center; flex-shrink: 0; width: 38px; height: 38px; border-radius: 50%; background: var(--color-border); color: var(--color-accent); font-size: 12px; font-weight: 700; }
+.sectionHeading h2 { margin: 0; font-size: 21px; font-weight: 650; line-height: 1.4; }
+.sectionCopy { padding-left: 55px; }
+.sectionCopy > p, .goal p, .learning p { color: var(--color-muted); font-size: 14px; line-height: 1.85; }
+.overview { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 50px; padding-block: 32px 38px; border-top: 1px solid var(--color-border); }
+.features { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; margin: 26px 0 0; padding: 0; list-style: none; }
+.features li { display: flex; align-items: flex-start; gap: 10px; min-width: 0; font-size: 11px; line-height: 1.65; }
+.features li + li { border-left: 1px solid var(--color-border); padding-left: 14px; }
+.features svg { color: var(--color-accent); margin-top: 3px; }
+.features small { display: block; color: var(--color-muted); font-size: 10px; }
+.goal { display: flex; align-items: flex-start; gap: 18px; padding: 15px 0 10px 30px; border-left: 1px solid var(--color-border); }
+.goal h3 { margin: 4px 0 15px; font-size: 16px; font-weight: 650; }
+.iconCircle { display: grid; place-items: center; flex-shrink: 0; width: 36px; height: 36px; border-radius: 50%; background: var(--color-border); color: var(--color-accent); }
+.middle { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, .95fr); gap: 40px; border-top: 1px solid var(--color-border); padding-block: 34px 36px; }
+.role { min-width: 0; }
+.responsibilities { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 18px; margin: 30px 0 0; padding: 0; list-style: none; }
+.responsibilities li { display: flex; align-items: flex-start; gap: 10px; color: var(--color-muted); font-size: 12px; line-height: 1.65; }
+.check { display: grid; place-items: center; flex-shrink: 0; width: 23px; height: 23px; border-radius: 50%; background: var(--color-border); color: var(--color-accent); }
+.challenges { padding-left: 30px; border-left: 1px solid var(--color-border); }
+.detailList { margin: 0; padding: 0; list-style: none; }
+.detailList li { display: flex; align-items: flex-start; gap: 17px; padding-block: 15px; }
+.detailList li:first-child { padding-top: 0; }
+.detailList li:last-child { padding-bottom: 0; }
+.challenges .detailList li + li { border-top: 1px solid var(--color-border); }
+.detailList h3 { margin: 1px 0 5px; font-size: 13px; font-weight: 600; line-height: 1.55; }
+.detailList p { color: var(--color-muted); font-size: 12px; line-height: 1.8; }
+.stackBand { padding-block: 30px 35px; background: var(--color-surface); border-block: 1px solid var(--color-border); }
+.stack { display: flex; flex-wrap: wrap; gap: 16px; margin: 24px 0 0; padding: 0; list-style: none; }
+.stack li { display: flex; align-items: center; justify-content: center; gap: 12px; min-height: 52px; padding: 10px 20px; border: 1px solid var(--color-border); border-radius: 8px; color: var(--color-text); font-size: 12px; white-space: nowrap; }
+.stack img { width: 25px; height: 25px; object-fit: contain; }
+.nextMark { display: grid; place-items: center; width: 25px; height: 25px; border-radius: 50%; background: #17191b; color: white; font-family: Arial, sans-serif; font-size: 16px; }
+.outcomes { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 45px; padding-block: 38px; }
+.outcomes .detailList { padding-left: 55px; }
+.learning { min-width: 0; border-left: 1px solid var(--color-border); padding: 10px 0 0 35px; }
+.quoteIcon { color: var(--color-accent); }
+.learning blockquote { margin: 8px 0 24px 25px; color: var(--color-muted); font-size: 14px; font-style: italic; line-height: 1.9; }
+.takeaway { display: flex; gap: 16px; padding-top: 22px; border-top: 1px solid var(--color-border); }
+.takeaway > svg { color: var(--color-accent); margin-top: 3px; }
+.takeaway h3 { margin: 0 0 5px; color: var(--color-accent); font-size: 12px; font-weight: 600; }
+.takeaway p { font-size: 12px; }
+.ctaBand { padding-block: 25px; border-block: 1px solid var(--color-border); background: var(--color-surface); }
+.cta { display: flex; align-items: center; gap: 24px; }
+.ctaIcon { display: grid; place-items: center; flex-shrink: 0; width: 62px; height: 62px; border: 1px solid var(--color-border); border-radius: 50%; color: var(--color-accent); }
+.ctaCopy { flex: 1; }
+.cta h2 { margin: 0 0 8px; font-size: 16px; font-weight: 650; line-height: 1.5; }
+.cta p { color: var(--color-muted); font-size: 12px; }
+.cta .actions { margin: 0; }
+.back { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; margin-top: 20px; color: var(--color-muted); font-size: 12px; }
+.back:hover { color: var(--color-accent); }
+@keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 1600px) { .hero { padding-bottom: 65px; } }
+@media (max-width: 1050px) {
+  .hero { gap: 22px; }
+  .hero h1 { font-size: 40px; }
+  .lead { font-size: 18px; }
+  .hero .actions { gap: 9px; }
+  .hero .actions :global(.btn) { padding-inline: 15px; }
+  .overview { gap: 28px; }
+  .sectionCopy { padding-left: 0; }
+  .features { gap: 10px; }
+  .features li { flex-direction: column; gap: 6px; }
+  .middle { gap: 28px; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); }
+  .responsibilities { gap: 20px 14px; }
+  .outcomes .detailList { padding-left: 0; }
+  .cta { flex-wrap: wrap; gap: 18px; }
+  .cta .actions { margin-left: 80px; }
+}
+@media (max-width: 760px) {
+  .main { padding-top: 110px; }
+  .hero { grid-template-columns: minmax(0, 1fr); gap: 28px; padding-bottom: 30px; }
+  .hero h1 { font-size: 38px; margin-top: 16px; }
+  .lead { max-width: 550px; font-size: 19px; }
+  .summary { max-width: 550px; }
+  .heroVisual { width: min(100%, 620px); justify-self: center; }
+  .sectionHeading { gap: 12px; }
+  .sectionHeading h2 { font-size: 19px; }
+  .overview, .middle, .outcomes { grid-template-columns: minmax(0, 1fr); gap: 30px; padding-block: 28px; }
+  .goal, .challenges, .learning { border-left: 0; padding: 25px 0 0; border-top: 1px solid var(--color-border); }
+  .features li { flex-direction: row; }
+  .features { margin-top: 22px; }
+  .responsibilities { margin-top: 24px; }
+  .stackBand { padding-block: 28px; }
+  .stack { gap: 10px; }
+  .stack li { flex: 1 1 140px; padding-inline: 14px; }
+  .learning blockquote { margin-left: 0; }
+  .cta { gap: 15px; }
+  .ctaIcon { width: 44px; height: 44px; }
+  .ctaCopy { flex-basis: calc(100% - 60px); }
+  .cta .actions { margin-left: 0; }
+}
+@media (max-width: 400px) {
+  .heroCopy :global(.eyebrow) { font-size: 9px; gap: 6px; }
+  .hero h1 { font-size: 34px; }
+  .lead { font-size: 18px; }
+  .hero .actions :global(.btn), .cta .actions :global(.btn) { padding-inline: 14px; font-size: 11px; }
+  .sectionHeading h2 { font-size: 18px; }
+  .number { width: 32px; height: 32px; }
+  .features { grid-template-columns: minmax(0, 1fr); gap: 15px; }
+  .features li + li { border-left: 0; padding-left: 0; }
+  .features small { display: inline; margin-left: 5px; }
+  .responsibilities { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .stack li { flex-basis: 120px; }
+}
