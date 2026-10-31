@@ -24,7 +24,10 @@ export default function SelectedWork() {
               <span className={styles.projectEyebrow}><span aria-hidden="true" /> Professional experience &middot; Advolve</span>
               <h3 id={`${project.slug}-title`}>{project.title}</h3>
               <p className={styles.meta}>{project.category}<span aria-hidden="true">&middot;</span>{project.source}</p>
-              <p className={styles.description}>{project.description}</p>
+              <div className={styles.contribution}>
+                <h4>My contribution</h4>
+                <ul>{project.contribution?.map(item => <li key={item}>{item}</li>)}</ul>
+              </div>
               <ProjectStack stack={project.stack} />
               <ProjectActions project={project} />
             </article>

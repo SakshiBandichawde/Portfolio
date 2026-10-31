@@ -12,8 +12,8 @@ const entries = [
     links: projects.filter(project => project.group === "agency").map(project => ({ label: project.title, href: project.liveUrl ?? `/work/${project.slug}` })),
   },
   {
-    id: "freelance", period: "Freelance Projects", title: "Freelance Full-Stack Developer",
-    description: "Built and delivered websites and web applications for clients, including booking platforms, ecommerce stores and business websites.",
+    id: "freelance", period: "Freelance Projects", title: "Freelance Web Developer",
+    description: "Independently developed and deployed websites and web applications, including e-commerce platforms and booking systems, working across frontend interfaces, backend integration and deployment.",
     icon: Layers3,
     linksTitle: "Selected projects",
     links: projects.filter(project => project.group === "featured" || project.group === "other").map(project => ({ label: project.title, href: project.group === "featured" ? `/work/${project.slug}` : project.liveUrl ?? `/work/${project.slug}` })),

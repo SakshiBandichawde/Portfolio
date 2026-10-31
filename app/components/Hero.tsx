@@ -13,10 +13,7 @@ export default function Hero() {
             <h1 id="hero-title">Hi, I&apos;m Sakshi.</h1>
             <p className={styles.tagline}>I turn ideas into thoughtful<br className={styles.desktopBreak} /> web experiences.</p>
             <p className={styles.description}>
-              I build responsive websites and web applications with React,
-              Next.js, JavaScript and TypeScript. I also work on full-stack
-              freelance projects, from user-facing interfaces to the
-              functionality behind them.
+              I build responsive, user-focused websites and web applications using React, Next.js, JavaScript and TypeScript. I enjoy turning designs into polished interfaces, with a focus on usability, interactions and performance.
             </p>
             <div className={styles.actions}>
               <a href="#work" className="btn btn-primary">View my work <ArrowRight size={14} aria-hidden="true" /></a>
