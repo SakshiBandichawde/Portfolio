@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { projects } from "../data/projects";
 import { ArrowUpRight, BriefcaseBusiness, CornerDownRight, Layers3, ShoppingBag } from "lucide-react";
 import styles from "./Experience.module.css";
 
@@ -8,14 +9,14 @@ const entries = [
     description: "Built client websites and web applications with React/Next.js, focusing on responsive UI, animations, API integration and deployment.",
     icon: ShoppingBag,
     linksTitle: "Selected work at Advolve",
-    links: [{ label: "Advolve Website", href: "/work/advolve" }, { label: "Villa Gulposh Booking System", href: "/work/villa-gulposh" }],
+    links: projects.filter(project => project.group === "agency").map(project => ({ label: project.title, href: project.liveUrl ?? `/work/${project.slug}` })),
   },
   {
     id: "freelance", period: "Freelance Projects", title: "Freelance Full-Stack Developer",
     description: "Built and delivered websites and web applications for clients, including booking platforms, ecommerce stores and business websites.",
     icon: Layers3,
     linksTitle: "Selected projects",
-    links: [{ label: "Karabook", href: "/work/karabook" }, { label: "Woodan", href: "/work/woodan" }, { label: "EcoClay Solutions", href: "/work/ecoclay" }, { label: "Komal Enterprises", href: "/work/komal-enterprises" }],
+    links: projects.filter(project => project.group === "featured" || project.group === "other").map(project => ({ label: project.title, href: project.group === "featured" ? `/work/${project.slug}` : project.liveUrl ?? `/work/${project.slug}` })),
   },
   {
     id: "internship", period: "Jul 2023 - Jan 2024", type: "Internship", title: "Web Developer Intern", company: "Advolve",
@@ -33,7 +34,7 @@ export default function Experience() {
           <header className={styles.intro}>
             <div>
               <h2 id="experience-title">Where I&apos;ve worked,<br /><span className="text-accent">and what I&apos;ve learned.</span></h2>
-              <p>My experience spans agency development, freelance projects<br className={styles.break} /> and building responsive web applications.</p>
+              <p>My experience spans agency development, freelance projects and responsive web applications, including basic SEO and analytics setup with Google Analytics, Search Console and Google Tag Manager.</p>
             </div>
             <div className={styles.note} aria-hidden="true">
               <span>Different projects,<br />same goal &mdash;<br />build great web experiences.</span>
@@ -54,7 +55,16 @@ export default function Experience() {
                     </div>
                     {entry.links && <div className={styles.related}>
                       <h4>{entry.linksTitle}</h4>
-                      <ul>{entry.links.map(link => <li key={link.href}><Link href={link.href}>{link.label}{entry.id === "advolve" && <ArrowUpRight size={11} aria-hidden="true" />}</Link></li>)}</ul>
+                      <ul>{entry.links.map(link => {
+                        const isExternal = link.href.startsWith("https://");
+                        return (
+                          <li key={link.href}>
+                            <Link href={link.href} target={isExternal ? "_blank" : undefined} rel={isExternal ? "noopener noreferrer" : undefined}>
+                              {link.label}{isExternal && <ArrowUpRight size={11} aria-hidden="true" />}
+                            </Link>
+                          </li>
+                        );
+                      })}</ul>
                     </div>}
                   </div>
                 </li>

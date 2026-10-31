@@ -1,0 +1,34 @@
+.projectDetails { border-left: 1px solid var(--color-border); padding: 4px 0 4px 30px; }
+.facts { display: grid; gap: 22px; margin: 0; }
+.facts dt, .technologyGroups dt { display: flex; align-items: center; gap: 9px; color: var(--color-accent); font-size: 12px; font-weight: 600; }
+.facts dd { margin: 8px 0 0 26px; font-size: 14px; line-height: 1.7; }
+.challengeLead { margin: 0 0 25px; color: var(--color-accent); font-size: 16px; font-weight: 500; line-height: 1.7; }
+.technologyGroups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px 30px; margin: 22px 0 0; padding-left: 55px; }
+.technologyGroups > div { min-width: 0; }
+.technologyGroups > div:last-child { grid-column: span 2; }
+.technologyGroups dd { margin: 12px 0 0; }
+.technologyGroups ul { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.technologyGroups li { padding: 7px 12px; border: 1px solid var(--color-border); border-radius: 8px; font-size: 12px; line-height: 1.5; }
+.learnings { padding-block: 35px 38px; }
+.learningList { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 45px; padding-left: 55px; }
+.learningList li { padding-block: 0; }
+.outcome { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 40px; }
+.outcomeCopy { padding-left: 55px; color: var(--color-muted); font-size: 14px; line-height: 1.85; }
+.outcomeCopy strong { color: var(--color-text); font-weight: 600; }
+.outcome > div:last-child { margin-top: 0; }
+@media (max-width: 1050px) {
+  .technologyGroups, .learningList, .outcomeCopy { padding-left: 0; }
+  .outcome { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+}
+@media (max-width: 760px) {
+  .projectDetails { border-left: 0; border-top: 1px solid var(--color-border); padding: 24px 0 0; }
+  .facts { grid-template-columns: minmax(0, .65fr) minmax(0, 1fr); gap: 20px; }
+  .technologyGroups { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 16px; }
+  .learnings { padding-block: 28px; }
+  .learningList { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+}
+@media (max-width: 400px) {
+  .facts { grid-template-columns: minmax(0, 1fr); }
+  .outcome > div:last-child { gap: 8px; }
+  .outcome :global(.btn) { padding-inline: 14px; font-size: 11px; }
+}

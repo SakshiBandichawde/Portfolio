@@ -6,15 +6,18 @@ import {
   Quote, Search, ServerCog, ShieldCheck, UsersRound,
 } from "lucide-react";
 import type { Project } from "../../data/projects";
-import styles from "./KarabookCaseStudy.module.css";
+import styles from "./CaseStudy.module.css";
 
 const responsibilities = [
+  "Software requirements specification (SRS) documentation",
+  "Collaborative brand discovery and competitor analysis",
   "Full-stack development (frontend + backend)",
-  "Deployment and server configuration",
+  "Deployment, server configuration and environment management",
   "UI/UX collaboration and implementation",
-  "Environment management",
   "Developer testing and debugging",
   "Coordination with the project manager",
+  "Ongoing maintenance and client-requested enhancements",
+  "Basic SEO and analytics setup with Google Analytics, Search Console and Google Tag Manager",
 ];
 
 const challenges = [
@@ -34,8 +37,8 @@ const challenges = [
     icon: ServerCog,
   },
   {
-    title: "Working with limited documentation",
-    description: "Clarifying requirements and making implementation decisions with the designer and project manager during development.",
+    title: "Translating discovery into requirements",
+    description: "Working with the team to translate brand understanding and competitor analysis into SRS documentation and actionable development requirements.",
     icon: FileSearch,
   },
 ];
@@ -47,8 +50,8 @@ const outcomes = [
     icon: ShieldCheck,
   },
   {
-    title: "Deployed and managed the live environment",
-    description: "Handled configuration, production updates and troubleshooting across the applications.",
+    title: "Continue to maintain and evolve the live platform",
+    description: "Maintain the project and implement updates based on evolving client requirements, including the addition of a dedicated Kumbh Mela page.",
     icon: ServerCog,
   },
   {
@@ -142,7 +145,7 @@ export default function KarabookCaseStudy({ project }: { project: Project }) {
           <section className={styles.role} aria-labelledby="role-title">
             <SectionHeading number="02" id="role-title">My Role &amp; Responsibilities</SectionHeading>
             <div className={styles.sectionCopy}>
-              <p>I worked as the sole developer on this project, handling development and deployment end to end. I collaborated with the UI designer and project manager, and performed developer testing before final API testing by the QA team.</p>
+              <p>As the sole developer, I handled development and deployment end to end. I also contributed to software requirements specification (SRS) documentation and worked with the team on brand discovery and competitor analysis to better understand the brand and inform project requirements. Throughout implementation, I collaborated with the UI designer and project manager, and performed developer testing before final API testing by the QA team.</p>
               <ul className={styles.responsibilities}>
                 {responsibilities.map(item => (
                   <li key={item}><span className={styles.check} aria-hidden="true"><Check size={13} /></span>{item}</li>
@@ -200,10 +203,10 @@ export default function KarabookCaseStudy({ project }: { project: Project }) {
           </div>
           <aside className={styles.learning} aria-label="Personal reflection">
             <Quote size={23} className={styles.quoteIcon} aria-hidden="true" />
-            <blockquote>This project helped me strengthen my full-stack skills, work closely with cross-functional teams, and understand the complete lifecycle of a production product, from design and development to deployment and maintenance.</blockquote>
+            <blockquote>This project strengthened my ability to connect requirements discovery with full-stack implementation, collaborate across teams, and support a product beyond launch through ongoing maintenance and client-requested enhancements.</blockquote>
             <div className={styles.takeaway}>
               <Lightbulb size={21} aria-hidden="true" />
-              <div><h3>Key takeaway</h3><p>Better planning, clear documentation and early testing can save a lot of time during deployment and integration.</p></div>
+              <div><h3>Key takeaway</h3><p>Shared brand understanding, clear requirements documentation and early testing help keep implementation aligned with client goals as the product evolves.</p></div>
             </div>
           </aside>
         </section>

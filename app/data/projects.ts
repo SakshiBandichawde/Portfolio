@@ -8,6 +8,7 @@ export type Project = {
   stack: string[];
   image?: string;
   liveUrl?: string;
+  githubUrl?: string;
   technicalHighlights?: string;
   group: "featured" | "agency" | "other" | "archive";
 };
@@ -29,39 +30,39 @@ export const projects: Project[] = [
   },
   {
     slug: "woodan", title: "Woodan", category: "Ecommerce platform", source: "woodan.in",
-    group: "featured", liveUrl: "https://woodan.in", image: "/images/mockups/woodanmockup.png",
-    description: "An ecommerce website for wooden gifts, with a customer-facing storefront and a custom admin dashboard.",
+    group: "featured", liveUrl: "https://www.woodan.in/", githubUrl: "https://github.com/WoodanStudio/WoodanEcommerce", image: "/images/mockups/woodanmockup.png",
+    description: "A custom e-commerce website for wooden gifts, home decor, personalised products, and corporate gifting, with a customer-facing storefront and an admin dashboard.",
     contribution: [
       "Built product browsing and detail pages.",
       "Implemented shopping and order-related flows.",
       "Created admin interfaces for products and orders.",
       "Integrated the storefront with backend services.",
     ],
-    stack: ["Next.js", "TypeScript", "Node.js", "MongoDB", "Tailwind CSS"],
+    stack: ["Next.js", "React", "Node.js", "MongoDB", "Razorpay", "Git/GitHub"],
     technicalHighlights: "Product and order data, API-connected interfaces, and customer/admin workflows.",
   },
   {
     slug: "advolve", title: "Advolve Website", category: "Agency website", source: "Advolve",
-    group: "agency",
+    group: "agency", liveUrl: "https://advolveadvertising.com/",
     description: "Implemented responsive sections, reusable components and motion details to bring the agency's visual direction to life.",
     stack: ["Next.js", "React", "Tailwind CSS", "GSAP"],
   },
   {
     slug: "villa-gulposh", title: "Villa Gulposh Booking System", category: "Booking application",
-    source: "Advolve", group: "agency",
+    source: "Advolve", group: "agency", liveUrl: "https://booking.villagulposh.com/",
     description: "Worked on the booking website and user/admin dashboards, connecting interface flows with application functionality.",
     stack: ["Next.js", "React", "Node.js", "MongoDB"],
   },
   {
     slug: "ecoclay", title: "EcoClay Solutions", category: "Business website", source: "WordPress",
-    group: "other", image: "/images/mockups/ecocalysolutionmockup.png",
+    group: "other", liveUrl: "https://ecoclaysolutions.com/", image: "/images/mockups/ecocalysolutionmockup.png",
     description: "Designed and developed a company website to showcase products, services and business information.",
     stack: ["WordPress"],
     contribution: ["Company profile", "Product showcase", "Business information"],
   },
   {
     slug: "komal-enterprises", title: "Komal Enterprises", category: "Company website", source: "WordPress",
-    group: "other",
+    group: "other", liveUrl: "https://komalenterprises.com/",
     description: "Built a professional company website with a clear structure and easy navigation.",
     stack: ["WordPress"],
   },

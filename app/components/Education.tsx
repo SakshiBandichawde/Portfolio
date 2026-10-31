@@ -2,7 +2,7 @@ import { GraduationCap } from "lucide-react";
 import styles from "./Experience.module.css";
 
 const qualifications = [
-  { title: "Master of Computer Applications (MCA)", institution: "SRTMUN, Nanded", period: "Completed" },
+  { title: "Master of Computer Science", institution: "SRTMUN, Nanded", period: "2023 - 2025" },
   { title: "Bachelor of Science in Computer Science (BSc)", period: "2020 - 2023" },
 ];
 
