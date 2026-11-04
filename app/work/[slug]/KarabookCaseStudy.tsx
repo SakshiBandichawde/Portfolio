@@ -86,9 +86,9 @@ function ProjectActions({ liveUrl }: { liveUrl?: string }) {
           <ExternalLink size={15} aria-hidden="true" /> View live website
         </a>
       )}
-      <button type="button" className="btn btn-light" disabled title="GitHub repository link has not been added yet">
-        <Github size={16} aria-hidden="true" /> GitHub
-      </button>
+      <a href="https://github.com/SakshiBandichawde" target="_blank" rel="noopener noreferrer" className="btn btn-light" title="View Sakshi's public GitHub profile and contribution activity">
+        <Github size={16} aria-hidden="true" /> GitHub activity
+      </a>
     </div>
   );
 }
@@ -104,6 +104,7 @@ export default function KarabookCaseStudy({ project }: { project: Project }) {
             <p className={styles.lead}>A multi-role property discovery and booking platform for villas, resorts, homestays, tents and apartments around Pune.</p>
             <p className={styles.summary}>KaraBook helps travellers discover and book unique stays, while giving property owners and administrators full control through dedicated dashboards.</p>
             <ProjectActions liveUrl={project.liveUrl} />
+            <p className={styles.repositoryNote}>Private client repository. My GitHub profile shows anonymised contribution activity across projects, not project-specific commits.</p>
           </div>
           {project.image && (
             <figure className={styles.heroVisual}>

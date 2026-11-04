@@ -17,8 +17,8 @@ export default function Contact() {
           <a href={enquiryHref} className="btn btn-primary" title="Email Sakshi about your project">Get in touch <ArrowRight size={14} aria-hidden="true" /></a>
           <div className={styles.socials}>
             <a href={`mailto:${contactEmail}`} aria-label={`Email Sakshi at ${contactEmail}`}><Mail size={14} aria-hidden="true" />Email</a>
-            <button type="button" disabled title="LinkedIn profile will be added later"><Linkedin size={14} aria-hidden="true" />LinkedIn</button>
-            <button type="button" disabled title="GitHub profile will be added later"><Github size={14} aria-hidden="true" />GitHub</button>
+            <a href="https://www.linkedin.com/in/sakshi-bandichawde-5a6330246" target="_blank" rel="noopener noreferrer" aria-label="Sakshi on LinkedIn"><Linkedin size={14} aria-hidden="true" />LinkedIn</a>
+            <a href="https://github.com/SakshiBandichawde" target="_blank" rel="noopener noreferrer" aria-label="Sakshi's GitHub profile and contribution activity" title="View GitHub profile and contribution activity"><Github size={14} aria-hidden="true" />GitHub</a>
           </div>
         </div>
       </div>

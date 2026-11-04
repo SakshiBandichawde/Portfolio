@@ -58,11 +58,9 @@ function ProjectActions({ project }: { project: Project }) {
           <ExternalLink size={15} aria-hidden="true" /> View live website
         </a>
       )}
-      {project.githubUrl && (
-        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="btn btn-light">
-          <Github size={16} aria-hidden="true" /> GitHub repository
-        </a>
-      )}
+      <a href="https://github.com/SakshiBandichawde" target="_blank" rel="noopener noreferrer" className="btn btn-light" title="View Sakshi's public GitHub profile and contribution activity">
+        <Github size={16} aria-hidden="true" /> GitHub activity
+      </a>
     </div>
   );
 }
@@ -78,6 +76,7 @@ export default function WoodanCaseStudy({ project }: { project: Project }) {
             <p className={styles.lead}>A custom e-commerce website for wooden gifts, home decor, personalised products, and corporate gifting.</p>
             <p className={styles.summary}>End-to-end application development and deployment, from the customer-facing storefront to the admin dashboard.</p>
             <ProjectActions project={project} />
+            <p className={styles.repositoryNote}>Private client repository. My GitHub profile shows anonymised contribution activity across projects, not project-specific commits.</p>
           </div>
           {project.image && (
             <figure className={styles.heroVisual}>

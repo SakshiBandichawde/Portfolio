@@ -17,7 +17,7 @@ export default function Hero() {
             </p>
             <div className={styles.actions}>
               <a href="#work" className="btn btn-primary">View my work <ArrowRight size={14} aria-hidden="true" /></a>
-              <button type="button" className="btn btn-light" disabled title="Resume will be added later">Download resume <Download size={14} aria-hidden="true" /></button>
+              <a href="/resume/Sakshi_Bandichawde_Resume.pdf" download="Sakshi_Bandichawde_Resume.pdf" className="btn btn-light" title="Download Sakshi's resume (PDF)">Download resume <Download size={14} aria-hidden="true" /></a>
             </div>
           </div>
           <HeroVisual />

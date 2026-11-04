@@ -7,6 +7,7 @@
 .summary { max-width: 445px; margin-top: 18px; color: var(--color-muted); font-size: 14px; line-height: 1.75; }
 .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 25px; }
 .actions :global(.btn) { min-height: 44px; }
+.repositoryNote { max-width: 445px; margin-top: 12px; color: var(--color-muted); font-size: 12px; line-height: 1.7; }
 .heroVisual { min-width: 0; margin: 0; animation: arrive 800ms ease-out both; }
 .mockup { display: block; width: 100%; height: auto; object-fit: contain; filter: drop-shadow(0 18px 16px rgba(44, 33, 25, .12)); }
 .sectionHeading { display: flex; align-items: center; gap: 17px; margin-bottom: 18px; }
