@@ -22,6 +22,12 @@
 .actions { display: flex; justify-self: end; gap: 4px; }
 .iconButton { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; border: 0; border-radius: 50%; color: var(--color-text); background: transparent; cursor: pointer; }
 .iconButton:hover { background: var(--color-border); }
+.themeIcon { position: relative; display: block; width: 18px; height: 18px; }
+.themeIcon svg { position: absolute; inset: 0; transition: transform 300ms ease, opacity 300ms ease; }
+.sun { transform: rotate(0deg) scale(1); opacity: 1; }
+.moon { transform: rotate(90deg) scale(0); opacity: 0; }
+.themeIcon[data-dark="true"] .sun { transform: rotate(-90deg) scale(0); opacity: 0; }
+.themeIcon[data-dark="true"] .moon { transform: rotate(0deg) scale(1); opacity: 1; }
 .menuButton, .mobileNavigation { display: none; }
 @media (max-width: 560px) {
   .header { top: 14px; height: 54px; grid-template-columns: 1fr auto; }

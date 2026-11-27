@@ -2,7 +2,8 @@
 
 import { Menu, Moon, Sun, X } from "lucide-react";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState, type MouseEvent } from "react";
+import { flushSync } from "react-dom";
 import styles from "./Header.module.css";
 
 const navigation = [
@@ -12,9 +13,22 @@ const navigation = [
   { label: "Contact", href: "/#contact" },
 ];
 
+type ThemeViewTransition = {
+  ready: Promise<void>;
+  finished: Promise<void>;
+  skipTransition: () => void;
+};
+
+type ThemeDocument = Document & {
+  startViewTransition?: (update: () => void) => ThemeViewTransition;
+};
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const themeTransition = useRef<ThemeViewTransition | null>(null);
+
+  useEffect(() => () => themeTransition.current?.skipTransition(), []);
 
   useEffect(() => {
     let savedTheme: string | null = null;
@@ -38,15 +52,52 @@ export default function Header() {
     return () => document.removeEventListener("keydown", closeOnEscape);
   }, [isMenuOpen]);
 
-  function toggleTheme() {
-    const nextIsDark = !isDark;
+  async function toggleTheme(event: MouseEvent<HTMLButtonElement>) {
+    const root = document.documentElement;
+    if (root.dataset.themeAnim === "1") return;
+
+    const nextIsDark = root.dataset.theme !== "dark";
     const theme = nextIsDark ? "dark" : "light";
-    setIsDark(nextIsDark);
-    document.documentElement.dataset.theme = theme;
+    function applyTheme() {
+      setIsDark(nextIsDark);
+      root.dataset.theme = theme;
+      try {
+        localStorage.setItem("portfolio-theme", theme);
+      } catch {
+        // The current theme still works without persistence.
+      }
+    }
+
+    const themeDocument = document as ThemeDocument;
+    if (typeof themeDocument.startViewTransition !== "function" ||
+      window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      applyTheme();
+      return;
+    }
+
+    const bounds = event.currentTarget.getBoundingClientRect();
+    const x = bounds.left + bounds.width / 2;
+    const y = bounds.top + bounds.height / 2;
+    const radius = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+    root.style.setProperty("--theme-cx", `${x}px`);
+    root.style.setProperty("--theme-cy", `${y}px`);
+    root.style.setProperty("--theme-r", `${radius}px`);
+    root.dataset.themeAnim = "1";
+
     try {
-      localStorage.setItem("portfolio-theme", theme);
+      // Capture the updated icon and theme together in the new view.
+      const transition = themeDocument.startViewTransition(() => flushSync(applyTheme));
+      themeTransition.current = transition;
+      void transition.ready.catch(() => {});
+      await transition.finished;
     } catch {
-      // The current theme still works without persistence.
+      applyTheme();
+    } finally {
+      themeTransition.current = null;
+      delete root.dataset.themeAnim;
+      root.style.removeProperty("--theme-cx");
+      root.style.removeProperty("--theme-cy");
+      root.style.removeProperty("--theme-r");
     }
   }
 
@@ -67,10 +118,14 @@ export default function Header() {
           type="button"
           className={styles.iconButton}
           onClick={toggleTheme}
+          aria-pressed={isDark}
           aria-label={isDark ? "Switch to light theme" : "Switch to dark theme"}
           title={isDark ? "Switch to light theme" : "Switch to dark theme"}
         >
-          {isDark ? <Moon size={18} strokeWidth={1.8} /> : <Sun size={18} strokeWidth={1.8} />}
+          <span className={styles.themeIcon} data-dark={isDark} aria-hidden="true">
+            <Sun size={18} strokeWidth={1.8} className={styles.sun} />
+            <Moon size={18} strokeWidth={1.8} className={styles.moon} />
+          </span>
         </button>
         <button
           type="button"

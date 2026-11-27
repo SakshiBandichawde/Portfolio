@@ -93,11 +93,28 @@ svg { flex-shrink: 0; }
 .btn:disabled { opacity: .5; cursor: not-allowed; }
 .btn:disabled:hover { transform: none; }
 a:focus-visible, button:focus-visible, summary:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 4px; }
+
+html[data-theme-anim="1"]::view-transition-old(root),
+html[data-theme-anim="1"]::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+html[data-theme-anim="1"]::view-transition-old(root) { z-index: 0; }
+html[data-theme-anim="1"]::view-transition-new(root) {
+  z-index: 1;
+  animation: theme-reveal 700ms cubic-bezier(.22, 1, .36, 1) both;
+}
+@keyframes theme-reveal {
+  from { clip-path: circle(0px at var(--theme-cx) var(--theme-cy)); }
+  to { clip-path: circle(var(--theme-r) at var(--theme-cx) var(--theme-cy)); }
+}
+
 @media (max-width: 760px) {
   .page-container { width: calc(100% - 36px); }
   .display-title { font-size: 34px; }
 }
 @media (max-width: 380px) { .display-title { font-size: 30px; } }
 @media (prefers-reduced-motion: reduce) {
+  html[data-theme-anim="1"]::view-transition-new(root) { animation: none; }
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
 }
